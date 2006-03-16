@@ -36,7 +36,7 @@ def initialize(registrar):
     profile_registry.registerProfile(
         'default',
         'CPS LDAP Setup',
-        "Sample LDAP Setup for Nuxeo CPS", 
+        "Sample LDAP Setup for Nuxeo CPS",
         'profiles/default',
         'CPSLDAPSetup',
         EXTENSION,
