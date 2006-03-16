@@ -23,12 +23,12 @@ from Testing import ZopeTestCase
 from Products.CPSDefault.tests.CPSTestCase import ExtensionProfileLayerClass
 
 # register profiles
-ZopeTestCase.installProduct('CPSUserFolderLDAPSetup')
+ZopeTestCase.installProduct('CPSLDAPSetup')
 
-class CPSUserFolderLDAPSetupLayerClass(ExtensionProfileLayerClass):
-    extension_ids = ('CPSUserFolderLDAPSetup:default', )
+class CPSLDAPSetupLayerClass(ExtensionProfileLayerClass):
+    extension_ids = ('CPSLDAPSetup:default', )
 
-CPSUserFolderLDAPSetupLayer = CPSUserFolderLDAPSetupLayerClass(
+CPSLDAPSetupLayer = CPSLDAPSetupLayerClass(
     __name__,
-    'CPSUserFolderLDAPSetupLayer'
+    'CPSLDAPSetupLayer'
     )

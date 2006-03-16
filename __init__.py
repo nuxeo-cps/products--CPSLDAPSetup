@@ -30,7 +30,7 @@ from Products.CPSCore.interfaces import ICPSSite
 registerDirectory('skins', globals())
 
 def initialize(registrar):
-    """CPSUserFolderLDAPSetup registrations. """
+    """CPSLDAPSetup registrations. """
 
     # Extension profile registration
     profile_registry.registerProfile(
@@ -38,6 +38,6 @@ def initialize(registrar):
         'CPS LDAP Setup',
         "Sample LDAP Setup for Nuxeo CPS", 
         'profiles/default',
-        'CPSUserFolderLDAPSetup',
+        'CPSLDAPSetup',
         EXTENSION,
         for_=ICPSSite)

@@ -1,11 +1,11 @@
 import unittest
 
 from Products.CPSDefault.tests.CPSTestCase import CPSTestCase
-from layer import CPSUserFolderLDAPSetupLayer
+from layer import CPSLDAPSetupLayer
 
 class SetupTestCase(CPSTestCase):
     
-    layer = CPSUserFolderLDAPSetupLayer
+    layer = CPSLDAPSetupLayer
 
     def test_layer(self):
         # test that the layer has been loaded

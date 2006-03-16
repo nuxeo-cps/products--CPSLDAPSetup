@@ -1,7 +1,7 @@
 $Id$
 
 =======================
-CPSUserFolderLDAPSetup
+CPSLDAPSetup
 =======================
 
 This package provides a sample LDAP configuration in the form of an
