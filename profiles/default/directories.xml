@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<object name="portal_directories" meta_type="CPS Directory Tool">
+ <property name="title"></property>
+ <object name="dir_ramcache" meta_type="RAM Cache Manager"/>
+
+ <!-- XXX When directory transtyping is enabled, use it, since it will allow
+ safety checks/content IO -->
+ <object name="members" remove="True"/>
+ <object name="members" meta_type="CPS Meta Directory"/>
+
+ <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
+ <object name="members_stack" meta_type="CPS Stacking Directory"/>
+ 
+ <!-- Roles and members directories are defined in base profile -->
+</object>

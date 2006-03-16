@@ -1,0 +1,13 @@
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- fixed typo in the sample sldap.conf
+- fixed an ACL that was too restrictive in the sample sldap.conf
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- the cps user is now in 'ou=the applications' instead of 'ou=software'

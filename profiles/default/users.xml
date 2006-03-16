@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="acl_users" meta_type="CPS User Folder">
+ <property name="title">CPS User Folder</property>
+ <property name="users_dir">members</property>
+ <property name="users_login_field">uid</property>
+ <property name="users_password_field">userPassword</property>
+ <property name="users_roles_field">cpsRoles</property>
+ <property name="users_groups_field">cpsGroups</property>
+ <property name="groups_dir">groups</property>
+ <property name="roles_dir">roles</property>
+ <property name="groups_members_field">members</property>
+ <property name="roles_members_field">members</property>
+ <property name="cache_timeout">1</property>
+</object>

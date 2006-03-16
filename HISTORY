@@ -1,0 +1,53 @@
+*******************************************
+** CPSUserFolderLDAPSetup V0.3.0 [R1 build 2006/03/15-19:19 by gracinet]
+** SVN URL: http://svn/pub/CPSUserFolderLDAPSetup/trunk Revision: 34468
+Requires:
+~~~~~~~~~
+- CPS Platform >= 3.4.0
+New features:
+~~~~~~~~~~~~~
+- Switched to Generic Setup extension profile
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** CPSUserFolderLDAPSetup V0.2.0 [R1 build 2006/03/11-15:27 by gracinet]
+** SVN URL: http://svn/pub/CPSUserFolderLDAPSetup/trunk Revision: 32306
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- more generic parameters for default LDAP setup in directories.py
+- Fix secutrity declaration typo in bindings
+- added homeless always set to False in order to allow the creation of user
+  folders for any body
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Update dependenncy
+- removed the bindings.py hack and use the TALES method registry introduced in
+  CPSSchemas/CPSDirectory > 3.3.8.
+
+*******************************************
+** CPSUserFolderLDAPSetup V0.1.0 [R1 build 2005/10/26-17:01 by anguenot]
+** SVN URL: https://svn.nuxeo.org/pub/CPSUserFolderLDAPSetup/trunk Revision: 28674
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+

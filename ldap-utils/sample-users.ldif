@@ -1,0 +1,152 @@
+dn: dc=mysite,dc=net
+objectClass: top
+objectClass: organization
+objectClass: dcObject
+dc: mysite
+o: My Site
+
+dn: ou=applications,dc=mysite,dc=net
+objectClass: top
+objectClass: organizationalUnit
+ou: applications
+
+dn: cn=cps,ou=applications,dc=mysite,dc=net
+objectClass: top
+objectClass: person
+cn: cps
+sn: cps
+userPassword: {SSHA}X5s7gqPebTkrDQG5mpCFF34qJL1S5PAq7bcp
+
+dn: cn=ldapadmin,dc=mysite,dc=net
+objectClass: top
+objectClass: person
+cn: ldapadmin
+sn: Admin
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: ou=people,dc=mysite,dc=net
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: uid=smanager,ou=people,dc=mysite,dc=net
+roomNumber: OpenSpace
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Section
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 7160
+ou: MOS
+uid: smanager
+mail: ogrisel-smanager@nuxeo.com
+cn: Section Manager
+initials: SM
+telephoneNumber: 7160
+o: DIR
+sn: Manager
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: uid=sreader,ou=people,dc=mysite,dc=net
+roomNumber: OpenSpace
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Section
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 7160
+ou: MOS
+uid: sreader
+mail: ogrisel-sreader@nuxeo.com
+cn: Section Reader
+initials: SR
+telephoneNumber: 7160
+o: DIR
+sn: Reader
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: uid=scontributor,ou=people,dc=mysite,dc=net
+roomNumber: OpenSpace
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Section
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 7160
+ou: MOS
+uid: scontributor
+mail: ogrisel-scontributor@nuxeo.com
+cn: Section Contributor
+initials: SC
+telephoneNumber: 7160
+o: DIR
+sn: Contributor
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: uid=sreviewer,ou=people,dc=mysite,dc=net
+roomNumber: OpenSpace
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Section
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 7160
+ou: MOS
+uid: sreviewer
+mail: ogrisel-sreviewer@nuxeo.com
+cn: Section Reviewer
+initials: SC
+telephoneNumber: 7160
+o: DIR
+sn: Reviewer
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: uid=CMartin,ou=people,dc=mysite,dc=net
+roomNumber: 5 S 35
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Claire
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 3563
+ou: MOS
+uid: CMartin
+mail: ogrisel-claire_martin@nuxeo.com
+cn: Claire Martin
+initials: CM
+telephoneNumber: 3409
+o: DIR
+sn: Martin
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+dn: uid=JDupont,ou=people,dc=mysite,dc=net
+roomNumber: 5 S 35
+employeeType: Salarie
+preferredLanguage: FR
+givenName: Jean
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+facsimileTelephoneNumber: 3563
+ou: MOS
+uid: JDupont
+mail: ogrisel-jdupont@nuxeo.com
+cn: Jean Dupont
+initials: JD
+telephoneNumber: 3409
+o: DIR
+sn: Dupont
+userPassword: {SSHA}SVoqZZkxxwQXQ2hrMFYqRffB0BOcC0Y3QRWe
+
+

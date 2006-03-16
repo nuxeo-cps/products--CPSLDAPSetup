@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<object name="portal_layouts" meta_type="CPS Layouts Tool">
+ <property name="title"></property>
+
+ <!-- Base profile layouts have to be rewritten from scratch, see #1527 -->
+ <object name="members" remove="True"/>
+ <object name="members" meta_type="CPS Layout"/>
+ <object name="members_search" remove="True"/>
+ <object name="members_search" meta_type="CPS Layout"/>
+
+ <object name="members_ldap" meta_type="CPS Layout"/>
+ <object name="members_search_ldap" meta_type="CPS Layout"/>
+</object>

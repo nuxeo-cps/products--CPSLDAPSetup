@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="members_search_ldap" meta_type="CPS Schema">
+ <field name="givenName" meta_type="CPS String Field"/>
+ <field name="sn" meta_type="CPS String Field"/>
+ <field name="uid" meta_type="CPS String Field"/>
+</object>

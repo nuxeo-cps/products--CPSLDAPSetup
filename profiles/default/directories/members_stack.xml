@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object name="members_stack" meta_type="CPS Stacking Directory">
+ <property name="title"></property>
+ <property name="schema">members_ldap</property>
+ <property name="schema_search"></property>
+ <property name="layout"></property>
+ <property name="layout_search"></property>
+ <property name="acl_directory_view_roles"></property>
+ <property name="acl_entry_create_roles">Manager</property>
+ <property name="acl_entry_delete_roles">Manager</property>
+ <property name="acl_entry_view_roles">Manager; Member</property>
+ <property name="acl_entry_edit_roles">Manager</property>
+ <property name="id_field">uid</property>
+ <property name="title_field">cn</property>
+ <property name="search_substring_fields"/>
+ <property name="is_hierarchical">False</property>
+ <property name="backing_dirs">
+  <element value="members_ldap"/>
+ </property>
+ <property name="creation_dir">members_ldap</property>
+</object>

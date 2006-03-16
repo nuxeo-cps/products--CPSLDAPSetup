@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<object name="members" meta_type="CPS Meta Directory">
+ <property name="title">label_members</property>
+ <property name="schema">members</property>
+ <property name="schema_search"></property>
+ <property name="layout">members</property>
+ <property name="layout_search">members_search</property>
+ <property name="acl_directory_view_roles">Manager; Member</property>
+ <property name="acl_entry_create_roles">Manager</property>
+ <property name="acl_entry_delete_roles">Manager</property>
+ <property name="acl_entry_view_roles">Manager; Member</property>
+ <property name="acl_entry_edit_roles">Manager; Owner</property>
+ <property name="id_field">uid</property>
+ <property name="title_field">fullname</property>
+ <property name="is_hierarchical">False</property>
+ <entry-local-role
+    role="Owner">python:entry.get('uid') == user_id</entry-local-role>
+ <backing name="members_stack">
+   <field-rename in-backing="mail" in-meta="email"/>
+   <field-rename in-backing="cn" in-meta="fullname"/>
+   <field-ignore name="dn"/>
+ </backing>
+</object>
