@@ -1,4 +1,21 @@
 *******************************************
+** CPSLDAPSetup V0.3.1 [R1 build 2006/03/16-16:46 by gracinet]
+** SVN URL: http://svn/pub/CPSLDAPSetup/trunk Revision: 34507
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- fixed typo in the sample sldap.conf
+- fixed an ACL that was too restrictive in the sample sldap.conf
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- the cps user is now in 'ou=the applications' instead of 'ou=software'
+
+*******************************************
 ** CPSUserFolderLDAPSetup V0.3.0 [R1 build 2006/03/15-19:19 by gracinet]
 ** SVN URL: http://svn/pub/CPSUserFolderLDAPSetup/trunk Revision: 34468
 Requires:
