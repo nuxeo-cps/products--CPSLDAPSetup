@@ -28,6 +28,12 @@
 
   <!-- Other interesting member data from inetOrgPerson -->
   <field name="givenName" meta_type="CPS String Field"/>
+  <field name="telephoneNumber" meta_type="CPS String Field"/>
+  <field name="postalAddress" meta_type="CPS String Field"/>
+  <field name="title" meta_type="CPS String Field"/>
+  <field name="ou" meta_type="CPS String Field"/>
+  <field name="o" meta_type="CPS String Field"/>
+  <field name="ou" meta_type="CPS String Field"/>
 
   <!-- CPS groups and global roles -->
   <field name="cpsGroups" meta_type="CPS String List Field">
