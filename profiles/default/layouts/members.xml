@@ -6,83 +6,7 @@
  <property name="style_prefix">layout_dir_</property>
  <property name="flexible_widgets"/>
  <property name="validate_values_expr"></property>
- <widget name="cpsGroups" meta_type="MultiSelect Widget">
-  <property name="fields">
-   <element value="cpsGroups"/>
-  </property>
-  <property name="label">label_groups</property>
-  <property name="label_edit">label_groups</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
-  <property name="hidden_empty">True</property>
-  <property name="vocabulary">groups</property>
- </widget>
- <widget name="cpsRoles" meta_type="Generic MultiSelect Widget">
-  <property name="fields">
-   <element value="cpsRoles"/>
-  </property>
-  <property name="label">label_roles</property>
-  <property name="label_edit">label_roles</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
-  <property name="hidden_empty">True</property>
-  <property name="translated">True</property>
-  <property name="vocabulary">global_roles</property>
-  <property name="render_format">checkbox</property>
- </widget>
- <widget name="email" meta_type="Email Widget">
-  <property name="fields">
-   <element value="email"/>
-  </property>
-  <property name="is_required">True</property>
-  <property name="label">label_email</property>
-  <property name="label_edit">label_email</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
-  <property name="css_class">url</property>
-  <property name="display_width">40</property>
- </widget>
- <widget name="fullname" meta_type="String Widget">
-  <property name="fields">
-   <element value="fullname"/>
-  </property>
-  <property name="is_required">True</property>
-  <property name="label">label_full_name</property>
-  <property name="label_edit">label_full_name</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
- <widget name="givenName" meta_type="String Widget">
-  <property name="fields">
-   <element value="givenName"/>
-  </property>
-  <property name="label">label_first_name</property>
-  <property name="label_edit">label_first_name</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
- <widget name="sn" meta_type="String Widget">
-  <property name="fields">
-   <element value="sn"/>
-  </property>
-  <property name="is_required">True</property>
-  <property name="label">label_last_name</property>
-  <property name="label_edit">label_last_name</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
+  <!-- login/id info -->
  <widget name="uid" meta_type="String Widget">
   <property name="fields">
    <element value="uid"/>
@@ -113,6 +37,89 @@
   </property>
   <property name="display_width">10</property>
   <property name="size_max">0</property>
+ </widget>
+
+ <!-- generally expected by CPS -->
+ <widget name="email" meta_type="Email Widget">
+  <property name="fields">
+   <element value="email"/>
+  </property>
+  <property name="is_required">True</property>
+  <property name="label">label_email</property>
+  <property name="label_edit">label_email</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+  <property name="css_class">url</property>
+  <property name="display_width">40</property>
+ </widget>
+ <widget name="fullname" meta_type="String Widget">
+  <property name="fields">
+   <element value="fullname"/>
+  </property>
+  <property name="is_required">True</property>
+  <property name="label">label_full_name</property>
+  <property name="label_edit">label_full_name</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+ </widget>
+ <widget name="sn" meta_type="String Widget">
+  <property name="fields">
+   <element value="sn"/>
+  </property>
+  <property name="is_required">True</property>
+  <property name="label">label_last_name</property>
+  <property name="label_edit">label_last_name</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+ </widget>
+
+ <!-- Other interesting member data from inetOrgPerson -->
+ <widget name="givenName" meta_type="String Widget">
+  <property name="fields">
+   <element value="givenName"/>
+  </property>
+  <property name="label">label_first_name</property>
+  <property name="label_edit">label_first_name</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+ </widget>
+
+ <!-- CPS groups and global roles -->
+ <widget name="cpsGroups" meta_type="MultiSelect Widget">
+  <property name="fields">
+   <element value="cpsGroups"/>
+  </property>
+  <property name="label">label_groups</property>
+  <property name="label_edit">label_groups</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+  <property name="hidden_empty">True</property>
+  <property name="vocabulary">groups</property>
+ </widget>
+ <widget name="cpsRoles" meta_type="Generic MultiSelect Widget">
+  <property name="fields">
+   <element value="cpsRoles"/>
+  </property>
+  <property name="label">label_roles</property>
+  <property name="label_edit">label_roles</property>
+  <property name="is_i18n">True</property>
+  <property name="readonly_layout_modes"/>
+  <property name="hidden_layout_modes"/>
+  <property name="hidden_readonly_layout_modes"/>
+  <property name="hidden_empty">True</property>
+  <property name="translated">True</property>
+  <property name="vocabulary">global_roles</property>
+  <property name="render_format">checkbox</property>
  </widget>
  <table>
   <row>
