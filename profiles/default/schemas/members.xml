@@ -1,31 +1,20 @@
 <?xml version="1.0"?>
 <object name="members" meta_type="CPS Schema">
- <field name="cpsGroups" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager; EntryManager</property>
-  <property name="read_ignore_storage">True</property>
-  <property
-     name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
-  <property name="write_ignore_storage">True</property>
-  <property
-     name="write_process_expr">python:util.dirCrossSetList('groups', 'members', data.get('uid'), data[field.getFieldId()])</property>
+
+  <!-- login/id info -->
+ <field name="uid" meta_type="CPS String Field">
+  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
- <field name="cpsRoles" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager</property>
-  <property name="read_ignore_storage">True</property>
-  <property
-     name="read_process_expr">python:util.dirCrossGetList('roles', 'members', data.get('uid'))</property>
-  <property name="write_ignore_storage">True</property>
-  <property
-     name="write_process_expr">python:util.dirCrossSetList('roles', 'members', data.get('uid'), data[field.getFieldId()])</property>
+ <field name="userPassword" meta_type="CPS Password Field">
+  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
+
+ <!-- generally expected by CPS -->
  <field name="email" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
  <field name="fullname" meta_type="CPS String Field">
   <property name="is_searchabletext">True</property>
-  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
- </field>
- <field name="givenName" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
  <field name="homeless" meta_type="CPS Boolean Field">
@@ -36,10 +25,27 @@
  <field name="sn" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
- <field name="uid" meta_type="CPS String Field">
-  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
- </field>
- <field name="userPassword" meta_type="CPS Password Field">
-  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
- </field>
+
+  <!-- Other interesting member data from inetOrgPerson -->
+  <field name="givenName" meta_type="CPS String Field"/>
+
+  <!-- CPS groups and global roles -->
+  <field name="cpsGroups" meta_type="CPS String List Field">
+    <property name="acl_write_roles">Manager; EntryManager</property>
+    <property name="read_ignore_storage">True</property>
+    <property
+       name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
+    <property name="write_ignore_storage">True</property>
+    <property
+       name="write_process_expr">python:util.dirCrossSetList('groups', 'members', data.get('uid'), data[field.getFieldId()])</property>
+  </field>
+  <field name="cpsRoles" meta_type="CPS String List Field">
+    <property name="acl_write_roles">Manager</property>
+    <property name="read_ignore_storage">True</property>
+    <property
+       name="read_process_expr">python:util.dirCrossGetList('roles', 'members', data.get('uid'))</property>
+    <property name="write_ignore_storage">True</property>
+    <property
+       name="write_process_expr">python:util.dirCrossSetList('roles', 'members', data.get('uid'), data[field.getFieldId()])</property>
+  </field>
 </object>
