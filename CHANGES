@@ -3,7 +3,8 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
--
+- A few more standard inetOrgPerson attributes (telephoneNumber and the like)
+  have been forwarded to the CPS directories.
 Bug fixes:
 ~~~~~~~~~~
 -
