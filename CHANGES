@@ -3,10 +3,7 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
-- A few more standard inetOrgPerson attributes (telephoneNumber and the like)
-  have been forwarded to the CPS directories.
-- all users registered in the members directory now have the Member role by
-  default: this is added by a read_process_expr in the 'members' schema
+-
 Bug fixes:
 ~~~~~~~~~~
 -

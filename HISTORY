@@ -1,4 +1,23 @@
 *******************************************
+** CPSLDAPSetup V0.4.0 [R1 build 2006/03/27-15:11 by ogrisel]
+** SVN URL: https://svn.nuxeo.org/pub/CPSLDAPSetup/trunk Revision: 34734
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- A few more standard inetOrgPerson attributes (telephoneNumber and the like)
+  have been forwarded to the CPS directories.
+- all users registered in the members directory now have the Member role by
+  default: this is added by a read_process_expr in the 'members' schema
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSLDAPSetup V0.3.1 [R1 build 2006/03/16-16:46 by gracinet]
 ** SVN URL: http://svn/pub/CPSLDAPSetup/trunk Revision: 34507
 Requires:
