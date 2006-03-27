@@ -1,17 +1,19 @@
-$Id$
-
-=======================
+============
 CPSLDAPSetup
-=======================
+============
 
-This package provides a sample LDAP configuration in the form of an
-extension profile for CPS 3.4
+:Revision: $Id$
 
-The main goal of this product is to provide an example of such a
-configuration and ease the setup.
+This package provides a sample LDAP configuration in the form of an extension
+profile for CPS 3.4
 
-This configuration defines an LDAP server as the main user
-sources. Groups and roles are stored within the ZODB.
+The main goal of this product is to provide an example of such a configuration
+and ease the setup.
+
+This configuration defines an LDAP server as the main user sources. Groups and
+roles are stored within the ZODB. All users registered in the members directory
+automatically get the 'Member' role (thanks to a read_process_expr in the
+members schema).
 
 You may start from this to setup your own configuration.
 
@@ -37,9 +39,9 @@ Configuration :
 Installation :
 --------------
 
- - Install the `python-ldap` module in the PYTHONPATH of your Zope instance. You
-   can check if it's correctly installed by typing `import ldap` in a python
-   shell.
+ - Install the ``python-ldap``_ module in the PYTHONPATH of your Zope instance.
+   You can check if it's correctly installed by typing `import ldap` in a 
+   python shell.
  - Extract this product within your Products directory.
  - Restart Zope
  - Create a CPS Site. *Do not check* the CPS LDAP Setup profile at this point.
@@ -51,8 +53,8 @@ Installation :
    login to succeed.
 
 The ldap_utils/ subfolder provides sample configuration files to setup a test
-OpenLDAP server. The default setup works out of the box with
-these. If you use it, don't forget to change the passwords.
+OpenLDAP server. The default setup works out of the box with these. If you use
+it, don't forget to change the passwords.
 
 Tuning:
 -------
@@ -67,5 +69,4 @@ Dependencies :
 
  - CPS >= 3.4.0
    http://www.cps-project.org/
- - python-ldap
-   http://python-ldap.sf.net
+ - _``python-ldap``: http://python-ldap.sf.net
