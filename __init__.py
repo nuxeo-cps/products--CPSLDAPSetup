@@ -25,6 +25,12 @@ from Products.GenericSetup import profile_registry
 from Products.GenericSetup import EXTENSION
 
 from Products.CPSCore.interfaces import ICPSSite
+try:
+    import ldap
+except ImportError:
+    raise RuntimeError(
+        "[CPSLDAPSetup] the python-ldap library isn't "
+        "installed or has problems")
 
 
 registerDirectory('skins', globals())
