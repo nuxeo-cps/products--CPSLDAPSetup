@@ -26,9 +26,6 @@ from Products.CPSDefault.tests.CPSTestCase import ExtensionProfileLayerClass
 ZopeTestCase.installProduct('CPSLDAPSetup')
 
 class CPSLDAPSetupLayerClass(ExtensionProfileLayerClass):
-    extension_ids = ('CPSLDAPSetup:default', )
+    extension_ids = ('CPSLDAPSetup:default',)
 
-CPSLDAPSetupLayer = CPSLDAPSetupLayerClass(
-    __name__,
-    'CPSLDAPSetupLayer'
-    )
+CPSLDAPSetupLayer = CPSLDAPSetupLayerClass(__name__, 'CPSLDAPSetupLayer')
