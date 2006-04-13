@@ -1,1 +1,1 @@
-/Users/zopes/courrier/Products/CPSLDAPSetup/i18n/cpsldapsetup.pot
+cpsldapsetup.pot
