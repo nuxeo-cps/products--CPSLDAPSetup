@@ -5,9 +5,16 @@
 
  <!-- Base profile schemas have to be rewritten from scratch, see #1527 -->
  <object name="members" remove="True"/>
- <object name="members" meta_type="CPS Schema"/>
 
- <object name="members_ldap" meta_type="CPS Schema"/>
+ <!-- Schemas for the toplevel members directory with aggregated fields -->
+ <object name="members" meta_type="CPS Schema"/>
  <object name="members_search" meta_type="CPS Schema"/>
+
+ <!-- Schemas for the branch with inetOrgPerson attributes -->
+ <object name="members_ldap" meta_type="CPS Schema"/>
  <object name="members_search_ldap" meta_type="CPS Schema"/>
+
+ <!-- Schema fot the CPS specific fields -->
+ <object name="members_cps_fields" meta_type="CPS Schema"/>
+
 </object>

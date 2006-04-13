@@ -36,11 +36,11 @@ Configuration :
  - Please consult other xml files in profiles/default to get the
    details on how the directories will be setup.
 
-Installation :
---------------
+Installation
+------------
 
  - Install the ``python-ldap``_ module in the PYTHONPATH of your Zope instance.
-   You can check if it's correctly installed by typing `import ldap` in a 
+   You can check if it's correctly installed by typing `import ldap` in a
    python shell.
  - Extract this product within your Products directory.
  - Restart Zope
@@ -49,23 +49,65 @@ Installation :
    of the members directory.
  - Go to portal_setup tool, select the CPS LDAP Setup profile and
    import it.
- - you'll need to give each member the Member role for her CPS
-   login to succeed.
 
 The ldap_utils/ subfolder provides sample configuration files to setup a test
 OpenLDAP server. The default setup works out of the box with these. If you use
 it, don't forget to change the passwords.
 
-Tuning:
--------
+Structure
+---------
 
- - the members_ldap directory is associated to the standard RAM Cache
+The default profile included in this setup changes the default ``members`` ZODB
+directory installed by the CPSDEfault base profile by the following new compound
+structure of directories::
+
+                                members
+                                - type:   MetaDirectory
+                                - schema: members
+
+                                   |
+                 ------------------------------------------
+                 |                                        |
+
+         members_stack                            members_cps_fields
+         - type:   StackingDirectory              - type:   ZODBDirectory
+         - schema: members_ldap                   - schema: members_cps_fields
+
+                 |
+       ----------------------------------------------------
+       |                                                  |
+  members_ldap                                    members_zodb
+  - type:   LDAPBackingDirectory                  - type:   ZODBDirectory
+  - schema: members_ldap                          - schema: members_ldap
+
+The toplevel meta directory is used to aggregate attributes that are defined in
+the inetOrgPerson schema that is used by the left hand side branch whereas the
+right hand side branch (a single ZODB directory) is used to store CPS specific
+attributes such as ``homeless``, ``last_login_time`` and any user defined fields
+that do not fit in the inetOrgPerson branch.
+
+The stacking directory is necessary to plug the LDAPBackingDirectory since the
+toplevel directory is not able to perform primary key (uid <-> dn) translation.
+The stacking is also useful to define members in the ZODB that are not defined
+in the LDAP server.
+
+The groups and roles are not affected by this setup. They remain stored in the 
+``groups`` and ``roles`` ZODB directories as defined in the CPSDefault base
+profiles.
+
+Cross references between the members / groups and members / roles directories
+are implemented as computed fields in the members schema.
+
+Tuning
+------
+
+ - the members_ldap and the ZODB directories are associated to the standard RAM Cache
    Manager sitting at the top of portal_directories.
  - CPSUserFolder comes with it's own built in cache set to 1s by the
    CPSDefault base profile.
 
-Dependencies :
----------------
+Dependencies
+------------
 
  - CPS >= 3.4.0
    http://www.cps-project.org/

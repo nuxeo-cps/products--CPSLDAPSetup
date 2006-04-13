@@ -1,57 +1,99 @@
 <?xml version="1.0"?>
 <object name="members" meta_type="CPS Schema">
+  <!-- Note to the interested reader:
+
+  The acl_write_expr set to "python:not datamodel.get('readonly_entry', False)"
+  allows the protection of fields that are potentially stored in the end in an
+  readonly LDAP server.
+
+  To enable this protection, you just need add a computed field in the
+  LDAPBackingDirectory schema to set "readonly_entry=True" on entries that
+  should have those fields in readonly mode.
+  -->
 
   <!-- login/id info -->
  <field name="uid" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
  </field>
  <field name="userPassword" meta_type="CPS Password Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
  </field>
 
  <!-- generally expected by CPS -->
  <field name="email" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
  </field>
  <field name="fullname" meta_type="CPS String Field">
   <property name="is_searchabletext">True</property>
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
- </field>
- <field name="homeless" meta_type="CPS Boolean Field">
-  <property name="read_ignore_storage">True</property>
-  <property name="read_process_expr">python:False</property>
-  <property name="write_ignore_storage">True</property>
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
  </field>
  <field name="sn" meta_type="CPS String Field">
   <property name="acl_write_roles">Manager; EntryManager; Owner</property>
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="homeless" meta_type="CPS Boolean Field">
+  <property name="acl_write_roles">Manager; EntryManager</property>
+ </field>
+ <field name="last_login_time" meta_type="CPS DateTime Field">
+  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
  </field>
 
-  <!-- Other interesting member data from inetOrgPerson -->
-  <field name="givenName" meta_type="CPS String Field"/>
-  <field name="telephoneNumber" meta_type="CPS String Field"/>
-  <field name="postalAddress" meta_type="CPS String Field"/>
-  <field name="title" meta_type="CPS String Field"/>
-  <field name="ou" meta_type="CPS String Field"/>
-  <field name="o" meta_type="CPS String Field"/>
-  <field name="ou" meta_type="CPS String Field"/>
+ <!-- Other interesting member data from inetOrgPerson -->
+ <field name="givenName" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="telephoneNumber" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="postalAddress" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="title" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="ou" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="o" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
+ <field name="ou" meta_type="CPS String Field">
+  <property name="acl_write_expr"
+    >python:not datamodel.get('readonly_entry', False)</property>
+ </field>
 
-  <!-- CPS groups and global roles -->
-  <field name="cpsGroups" meta_type="CPS String List Field">
-    <property name="acl_write_roles">Manager; EntryManager</property>
-    <property name="read_ignore_storage">True</property>
-    <property
-       name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
-    <property name="write_ignore_storage">True</property>
-    <property
-       name="write_process_expr">python:util.dirCrossSetList('groups', 'members', data.get('uid'), data[field.getFieldId()])</property>
-  </field>
-  <field name="cpsRoles" meta_type="CPS String List Field">
-    <property name="acl_write_roles">Manager</property>
-    <property name="read_ignore_storage">True</property>
-    <property
-       name="read_process_expr">python:[role for role in util.dirCrossGetList('roles', 'members', data.get('uid')) if role != 'Member']+['Member']</property>
-    <property name="write_ignore_storage">True</property>
-    <property
-       name="write_process_expr">python:util.dirCrossSetList('roles', 'members', data.get('uid'), data[field.getFieldId()])</property>
-  </field>
+ <!-- CPS groups and global roles computed references -->
+ <field name="cpsGroups" meta_type="CPS String List Field">
+   <property name="acl_write_roles">Manager; EntryManager</property>
+   <property name="read_ignore_storage">True</property>
+   <property
+      name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
+   <property name="write_ignore_storage">True</property>
+   <property
+      name="write_process_expr">python:util.dirCrossSetList('groups', 'members', data.get('uid'), data[field.getFieldId()])</property>
+ </field>
+ <field name="cpsRoles" meta_type="CPS String List Field">
+   <property name="acl_write_roles">Manager</property>
+   <property name="read_ignore_storage">True</property>
+   <property
+      name="read_process_expr">python:[role for role in util.dirCrossGetList('roles', 'members', data.get('uid')) if role != 'Member']+['Member']</property>
+   <property name="write_ignore_storage">True</property>
+   <property
+      name="write_process_expr">python:util.dirCrossSetList('roles', 'members', data.get('uid'), data[field.getFieldId()])</property>
+ </field>
 </object>

@@ -14,10 +14,14 @@
  <property name="title_field">fullname</property>
  <property name="is_hierarchical">False</property>
  <entry-local-role
-    role="Owner">python:entry.get('uid') == user_id</entry-local-role>
+   role="Owner">python:entry.get('uid') == user_id</entry-local-role>
  <backing name="members_stack">
    <field-rename in-backing="mail" in-meta="email"/>
    <field-rename in-backing="cn" in-meta="fullname"/>
    <field-ignore name="dn"/>
+ </backing>
+ <backing name="members_cps_fields">
+   <missing-entry-expr
+     >python:{'homeless': False, 'last_login_time': None}</missing-entry-expr>
  </backing>
 </object>

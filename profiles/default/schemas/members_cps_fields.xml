@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="members" meta_type="CPS Schema">
+
+ <!-- schema to host non-inetOrgPerson attributes -->
+
+ <field name="uid" meta_type="CPS String Field" />
+
+ <field name="homeless" meta_type="CPS Boolean Field"/>
+
+ <field name="last_login_time" meta_type="CPS DateTime Field"/>
+
+</object>

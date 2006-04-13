@@ -7,7 +7,7 @@
  <property name="flexible_widgets"/>
  <property name="validate_values_expr"></property>
   <!-- login/id info -->
- <widget name="uid" meta_type="String Widget">
+ <widget name="uid" meta_type="User Identifier Widget">
   <property name="fields">
    <element value="uid"/>
   </property>
@@ -78,8 +78,6 @@
   <property name="hidden_layout_modes"/>
   <property name="hidden_readonly_layout_modes"/>
  </widget>
-
- <!-- Other interesting member data from inetOrgPerson -->
  <widget name="givenName" meta_type="String Widget">
   <property name="fields">
    <element value="givenName"/>
@@ -91,6 +89,20 @@
   <property name="hidden_layout_modes"/>
   <property name="hidden_readonly_layout_modes"/>
  </widget>
+ <widget name="homeless" meta_type="Boolean Widget">
+  <property name="fields">
+   <element value="homeless"/>
+  </property>
+  <property name="label">cpsdir_label_homeless</property>
+  <property name="label_edit">cpsdir_label_homeless</property>
+  <property name="description">Homeless ?</property>
+  <property name="help">cpsdir_help_homeless</property>
+  <property name="is_i18n">True</property>
+  <property name="label_false">cpsschemas_label_true</property>
+  <property name="label_true">cpsschemas_label_false</property>
+ </widget>
+
+ <!-- Other interesting member data from inetOrgPerson -->
  <widget name="telephoneNumber" meta_type="String Widget">
   <property name="fields">
    <element value="telephoneNumber"/>
@@ -215,6 +227,8 @@
     <row>
    <cell name="ou" ncols="2"/>
   </row>
-
+  <row>
+   <cell name="homeless" ncols="2"/>
+  </row>
  </table>
 </object>

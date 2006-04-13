@@ -7,10 +7,36 @@
  <!-- XXX When directory transtyping is enabled, use it, since it will allow
  safety checks/content IO -->
  <object name="members" remove="True"/>
+
+ <!-- Top level members directory
+
+ This is is the toplevel members directory with aggregated attributes from two
+ backing branches
+ -->
  <object name="members" meta_type="CPS Meta Directory"/>
 
- <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
+ <!-- inetOrgPerson attributes branch
+
+ This branch stores the attributes that are standardized in the inetOrgPerson
+ schema. This banch is a compound branch with a toplevel stacking directories that merge entries from the LDAP server with some CPS only ZODB directory (empty by
+ default).
+ -->
  <object name="members_stack" meta_type="CPS Stacking Directory"/>
+
+ <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
+ <object name="members_zodb" meta_type="CPS ZODB Directory"/>
+
+
+ <!-- CPS specific attributes branch
  
- <!-- Roles and members directories are defined in base profile -->
+ Second backing branch for the top level Meta directory that stores attributes
+ that are specific to CPS such as the homeless and last_login_time attributes.
+ This branch is just a single ZODB directory.
+ -->
+ <object name="members_cps_fields" meta_type="CPS ZODB Directory"/>
+
+ <!--
+   Roles and members directories remain as defined in the CPSDefault base
+   profile
+ -->
 </object>

@@ -3,10 +3,12 @@ Requires:
 -
 New features:
 ~~~~~~~~~~~~~
--
+- added new ZODB directories as backings for the Meta and the Stacking to allow
+  for better flexibility
 Bug fixes:
 ~~~~~~~~~~
 -
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
--
+- inetOrgPerson fields can switch to RO by adding a boolean attribute named
+  ``readonly_entry``

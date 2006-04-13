@@ -1,22 +1,20 @@
 <?xml version="1.0"?>
-<object name="members_stack" meta_type="CPS Stacking Directory">
+<object name="members_cps_fields" meta_type="CPS ZODB Directory">
+ <!-- This directory should not be used directly thus we don't define a layout
+      nor we give roles in ACL - use the members dir to edit the attributes
+      managged by this directory -->
  <property name="title"></property>
- <property name="schema">members_ldap</property>
+ <property name="schema">members_cps_fields</property>
  <property name="schema_search"></property>
  <property name="layout"></property>
  <property name="layout_search"></property>
  <property name="acl_directory_view_roles"></property>
  <property name="acl_entry_create_roles">Manager</property>
  <property name="acl_entry_delete_roles">Manager</property>
- <property name="acl_entry_view_roles">Manager; Member</property>
+ <property name="acl_entry_view_roles">Manager</property>
  <property name="acl_entry_edit_roles">Manager</property>
  <property name="id_field">uid</property>
- <property name="title_field">cn</property>
- <property name="search_substring_fields"/>
+ <property name="title_field">uid</property>
  <property name="is_hierarchical">False</property>
- <property name="backing_dirs">
-  <element value="members_ldap"/>
-  <element value="members_zodb"/>
- </property>
- <property name="creation_dir">members_ldap</property>
+ <cache-manager name="dir_ramcache"/>
 </object>
