@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="members_zodb" meta_type="CPS ZODB Directory">
  <property name="title"></property>
- <property name="schema">members_zodb</property>
+ <property name="schema">members_ldap</property>
  <property name="schema_search"></property>
  <property name="layout"></property>
  <property name="layout_search"></property>
