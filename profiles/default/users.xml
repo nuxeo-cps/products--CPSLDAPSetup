@@ -10,5 +10,4 @@
  <property name="roles_dir">roles</property>
  <property name="groups_members_field">members</property>
  <property name="roles_members_field">members</property>
- <property name="cache_timeout">1</property>
 </object>
