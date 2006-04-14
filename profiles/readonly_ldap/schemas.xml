@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- $Id: schemas.xml 35176 2006-04-13 17:57:16Z ogrisel $ -->
+<object name="portal_schemas" meta_type="CPS Schemas Tool">
+
+  <!--
+  Add three new dummy schemas that old the readonly_entry field that is used
+  to protect entries that comes from a readonly LDAP server
+  -->
+
+ <!-- Schemas with flag whose value is read in the underlying storage -->
+ <object name="members_readonly_entry_flag" meta_type="CPS Schema"/>
+
+ <!-- Schema with flag set to False ignoring storage -->
+ <object name="members_readonly_entry_flag_false" meta_type="CPS Schema"/>
+
+ <!-- schema with flag set to True ignoring storage -->
+ <object name="members_readonly_entry_flag_true" meta_type="CPS Schema"/>
+
+</object>
+

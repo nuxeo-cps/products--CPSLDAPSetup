@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<object name="members">
+ <property name="schema">members members_readonly_entry_flag</property>
+</object>

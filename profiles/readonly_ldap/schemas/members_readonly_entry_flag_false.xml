@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="members_readonly_entry_flag_false" meta_type="CPS Schema">
+
+ <field name="readonly_entry" meta_type="CPS Boolean Field">
+  <property name="read_ignore_storage">True</property>
+  <property name="read_process_expr">python:False</property>
+  <property name="write_ignore_storage">True</property>
+ </field>
+
+</object>

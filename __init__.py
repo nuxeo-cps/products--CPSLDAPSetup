@@ -47,3 +47,12 @@ def initialize(registrar):
         'CPSLDAPSetup',
         EXTENSION,
         for_=ICPSSite)
+
+    profile_registry.registerProfile(
+        'readonly_ldap',
+        'CPS LDAP Setup (extension to use LDAP in read only mode)',
+        "Extension to default to use LDAP in read only mode",
+        'profiles/readonly_ldap',
+        'CPSLDAPSetup',
+        EXTENSION,
+        for_=ICPSSite)
