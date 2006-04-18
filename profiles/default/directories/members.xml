@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <object name="members" meta_type="CPS Meta Directory">
  <property name="title">label_members</property>
- <property name="schema">members</property>
+ <property name="schemas">
+  <element value="members"/>
+  <element value="members_cps_fields"/>
+ </property>
  <property name="schema_search"></property>
  <property name="layout">members</property>
  <property name="layout_search">members_search</property>

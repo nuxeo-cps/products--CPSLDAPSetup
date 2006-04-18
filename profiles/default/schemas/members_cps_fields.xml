@@ -5,7 +5,9 @@
 
  <field name="uid" meta_type="CPS String Field" />
 
- <field name="homeless" meta_type="CPS Boolean Field"/>
+ <field name="homeless" meta_type="CPS Boolean Field">
+   <property name="acl_write_roles">Manager; EntryManager</property>
+ </field>
 
  <field name="last_login_time" meta_type="CPS DateTime Field"/>
 

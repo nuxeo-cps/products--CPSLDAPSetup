@@ -46,13 +46,6 @@
   <property name="acl_write_expr"
     >python:not datamodel.get('readonly_entry', False)</property>
  </field>
- <field name="homeless" meta_type="CPS Boolean Field">
-  <property name="acl_write_roles">Manager; EntryManager</property>
- </field>
- <field name="last_login_time" meta_type="CPS DateTime Field">
-  <property name="acl_write_roles">Manager; EntryManager; Owner</property>
- </field>
-
  <!-- Other interesting member data from inetOrgPerson -->
  <field name="givenName" meta_type="CPS String Field">
   <property name="acl_write_expr"

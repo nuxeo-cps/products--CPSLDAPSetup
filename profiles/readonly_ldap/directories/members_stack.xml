@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <object name="members_stack">
- <property name="schema">members_ldap members_readonly_entry_flag</property>
+ <property name="schemas" purge="False">
+  <element value="members_readonly_entry_flag"/>
+ </property>
  <property name="creation_dir">members_zodb</property>
 </object>

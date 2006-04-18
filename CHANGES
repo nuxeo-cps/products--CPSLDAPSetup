@@ -9,4 +9,5 @@ Bug fixes:
 -
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
--
+- make use of the new schemas token property to avoid property overwrite with
+  extension profiles

@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <object name="members_ldap">
- <property name="schema">members_ldap members_readonly_entry_flag_true</property>
+  <property name="schemas" purge="False">
+   <element value="members_readonly_entry_flag_true"/>
+  </property>
 </object>
