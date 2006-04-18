@@ -1,4 +1,25 @@
 *******************************************
+** CPSLDAPSetup V0.5.0 [R1 build 2006/04/18-14:50 by ogrisel]
+** SVN URL: https://svn.nuxeo.org/pub/CPSLDAPSetup/trunk Revision: 35243
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+- added new ZODB directories as backings for the Meta and the Stacking to allow
+  for better flexibility
+- added a new extension^2 profile named readonly_ldap that protect attributes
+  that are stored in the LDAP at the schema level in case CPS cannot write in the
+  LDAP
+Bug fixes:
+~~~~~~~~~~
+- added missing confirm password field and widget
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- inetOrgPerson fields can switch to RO by adding a boolean attribute named
+  ``readonly_entry``
+
+*******************************************
 ** CPSLDAPSetup V0.4.0 [R1 build 2006/03/27-15:11 by ogrisel]
 ** SVN URL: https://svn.nuxeo.org/pub/CPSLDAPSetup/trunk Revision: 34734
 Requires:
