@@ -35,8 +35,28 @@
   <property name="hidden_readonly_layout_modes">
    <element value="edit"/>
   </property>
-  <property name="display_width">10</property>
+  <property name="display_width">20</property>
   <property name="size_max">0</property>
+ </widget>
+ <widget name="confirm" meta_type="Password Widget">
+  <property name="fields">
+   <element value="confirm"/>
+  </property>
+  <property name="label">label_password_confirm</property>
+  <property name="label_edit">label_password_confirm</property>
+  <property name="description">Password confirmation when editing</property>
+  <property name="is_i18n">True</property>
+  <property name="hidden_layout_modes">
+   <element value="view"/>
+   <element value="search"/>
+  </property>
+  <property name="hidden_readonly_layout_modes">
+   <element value="edit"/>
+  </property>
+  <property name="hidden_empty">True</property>
+  <property name="display_width">20</property>
+  <property name="size_max">0</property>
+  <property name="password_widget">userPassword</property>
  </widget>
 
  <!-- generally expected by CPS -->
@@ -195,6 +215,9 @@
   </row>
   <row>
    <cell name="userPassword" ncols="2"/>
+  </row>
+  <row>
+   <cell name="confirm" ncols="2"/>
   </row>
   <row>
    <cell name="fullname" ncols="2"/>

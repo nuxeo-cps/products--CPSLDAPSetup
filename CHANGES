@@ -5,9 +5,12 @@ New features:
 ~~~~~~~~~~~~~
 - added new ZODB directories as backings for the Meta and the Stacking to allow
   for better flexibility
+- added a new extension^2 profile named readonly_ldap that protect attributes
+  that are stored in the LDAP at the schema level in case CPS cannot write in the
+  LDAP
 Bug fixes:
 ~~~~~~~~~~
--
+- added missing confirm password field and widget
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
 - inetOrgPerson fields can switch to RO by adding a boolean attribute named

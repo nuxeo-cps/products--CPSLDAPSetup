@@ -5,7 +5,7 @@ CPSLDAPSetup
 :Revision: $Id$
 
 This package provides a sample LDAP configuration in the form of an extension
-profile for CPS 3.4
+profile for CPS 3.4.1
 
 The main goal of this product is to provide an example of such a configuration
 and ease the setup.
@@ -30,11 +30,12 @@ Configuration :
 ----------------
 
  - edit the members_ldap.xml file from profiles/default/directories/
- and adjust to parameters according to your own LDAP server
- configuration.
+   and adjust to parameters according to your own LDAP server
+   configuration.
 
  - Please consult other xml files in profiles/default to get the
    details on how the directories will be setup.
+
 
 Installation
 ------------
@@ -49,16 +50,20 @@ Installation
    of the members directory.
  - Go to portal_setup tool, select the CPS LDAP Setup profile and
    import it.
+ - If your LDAP server is read only, may also want to additionally import the
+   CPS LDAP Setup Readonly profile (see below for more details on the readonly
+   setup).
 
 The ldap_utils/ subfolder provides sample configuration files to setup a test
 OpenLDAP server. The default setup works out of the box with these. If you use
 it, don't forget to change the passwords.
 
+
 Structure
 ---------
 
 The default profile included in this setup changes the default ``members`` ZODB
-directory installed by the CPSDEfault base profile by the following new compound
+directory installed by the CPSDefault base profile by the following new compound
 structure of directories::
 
                                 members
@@ -98,17 +103,33 @@ profiles.
 Cross references between the members / groups and members / roles directories
 are implemented as computed fields in the members schema.
 
+
+Read-only LDAP mode
+-------------------
+
+If you want to plug CPS on a readonly LDAP server you should furthermore import
+the CPSLDAPSetup "readonly_ldap" extension profile (after having first applied
+the CPSLDAPSetup "default" extension profile).
+
+This extension add a dynamic readonly protection to the fields that are stored
+in the LDAP server to make it explicit to users they cannot change those values.
+CPS specific fields (groups, roles and homeless) can still get changed (by a
+Manager) since they do not require LDAP write access.
+
+Furthermore, new members created from CPS are stored in the "members_zodb"
+backing instead of "members_ldap".
+
 Tuning
 ------
 
- - the members_ldap and the ZODB directories are associated to the standard RAM Cache
-   Manager sitting at the top of portal_directories.
+ - the members_ldap and the ZODB directories are associated to the
+   standard RAM Cache Manager sitting at the top of portal_directories.
  - CPSUserFolder comes with it's own built in cache set to 1s by the
    CPSDefault base profile.
 
 Dependencies
 ------------
 
- - CPS >= 3.4.0
+ - CPS >= 3.4.1
    http://www.cps-project.org/
  - _``python-ldap``: http://python-ldap.sf.net
