@@ -1,4 +1,20 @@
 *******************************************
+** CPSLDAPSetup V1.0.0 [R1 build 2006/05/22-09:31 by ogrisel]
+** SVN URL: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk Revision: 45877
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
 ** CPSLDAPSetup V0.5.1 [R1 build 2006/04/19-17:10 by ogrisel]
 ** SVN URL: https://svn.nuxeo.org/pub/CPSLDAPSetup/trunk Revision: 35314
 Requires:
