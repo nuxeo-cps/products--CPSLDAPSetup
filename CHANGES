@@ -9,4 +9,5 @@ Bug fixes:
 -
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
--
+- Made it possible for CPSLDAPSetup to be shipped to systems that don't have the
+  python ldap module.

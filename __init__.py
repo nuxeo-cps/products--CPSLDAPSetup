@@ -1,5 +1,4 @@
-# -*- coding: iso-8859-15 -*-
-# (C) Copyright 2005 Nuxeo SARL <http://nuxeo.com>
+# (C) Copyright 2005-2006 Nuxeo SAS <http://nuxeo.com>
 # Authors: Julien Anguenot <ja@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -17,42 +16,50 @@
 # 02111-1307, USA.
 #
 # $Id$
-"""Helper for LDAP configuration using CPSUserFolder
+"""Helper for LDAP configuration using CPSUserFolder.
 """
+
+from logging import getLogger
 
 from Products.CMFCore.DirectoryView import registerDirectory
 from Products.GenericSetup import profile_registry
 from Products.GenericSetup import EXTENSION
 
 from Products.CPSCore.interfaces import ICPSSite
+
+logger = getLogger('CPSLDAPSetup')
+
+imports_ok = True
 try:
     import ldap
-except ImportError:
-    raise RuntimeError(
-        "[CPSLDAPSetup] the python-ldap library isn't "
-        "installed or has problems")
+except ImportError, err:
+    logger.info(
+        "The python-ldap library isn't installed or has problems %s"
+        "The CPSLDAPSetup profiles won't be available." % str(err))
+    imports_ok = False
 
+if imports_ok:
+    registerDirectory('skins', globals())
 
-registerDirectory('skins', globals())
+    def initialize(registrar):
+        """CPSLDAPSetup registrations. """
 
-def initialize(registrar):
-    """CPSLDAPSetup registrations. """
+        # Extension profile registration
+        profile_registry.registerProfile(
+            'default',
+            'CPS LDAP Setup',
+            "Sample LDAP Setup for Nuxeo CPS",
+            'profiles/default',
+            'CPSLDAPSetup',
+            EXTENSION,
+            for_=ICPSSite)
 
-    # Extension profile registration
-    profile_registry.registerProfile(
-        'default',
-        'CPS LDAP Setup',
-        "Sample LDAP Setup for Nuxeo CPS",
-        'profiles/default',
-        'CPSLDAPSetup',
-        EXTENSION,
-        for_=ICPSSite)
+        profile_registry.registerProfile(
+            'readonly_ldap',
+            'CPS LDAP Setup (extension to use LDAP in read only mode)',
+            "Extension to default to use LDAP in read only mode",
+            'profiles/readonly_ldap',
+            'CPSLDAPSetup',
+            EXTENSION,
+            for_=ICPSSite)
 
-    profile_registry.registerProfile(
-        'readonly_ldap',
-        'CPS LDAP Setup (extension to use LDAP in read only mode)',
-        "Extension to default to use LDAP in read only mode",
-        'profiles/readonly_ldap',
-        'CPSLDAPSetup',
-        EXTENSION,
-        for_=ICPSSite)
