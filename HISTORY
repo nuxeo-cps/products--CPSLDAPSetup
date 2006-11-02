@@ -1,3 +1,24 @@
+===========================================================
+Package: CPSLDAPSetup 1.1.0
+===========================================================
+First release built by: madarche at: 2006-11-02T20:59:12
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.1.0
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@49918
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Made it possible for CPSLDAPSetup to be shipped to systems that don't have the
+  python ldap module.
+
 *******************************************
 ** CPSLDAPSetup V1.0.0 [R1 build 2006/05/22-09:31 by ogrisel]
 ** SVN URL: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk Revision: 45877
