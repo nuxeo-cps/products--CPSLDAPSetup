@@ -1,4 +1,24 @@
 ===========================================================
+Package: CPSLDAPSetup 1.1.1
+===========================================================
+First release built by: gracinet at: 2006-11-17T19:13:01
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.1.1
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@50162
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Basque translation
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.1.0
 ===========================================================
 First release built by: madarche at: 2006-11-02T20:59:12
