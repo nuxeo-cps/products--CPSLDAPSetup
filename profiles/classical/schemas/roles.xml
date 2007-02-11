@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- $Id -->
+<object name="roles" meta_type="CPS Schema">
+  <!-- cross get/set works the other way round as 
+       roles aren't in member LDAP record (inetOrgPerson) -->
+  <field name="members" meta_type="CPS String List Field">
+    <property name="read_process_expr" />
+    <property name="write_process_expr" />
+    <property name="read_ignore_storage">False</property>
+    <property name="write_ignore_storage">False</property>
+  </field>
+</object>

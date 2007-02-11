@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<object name="portal_directories" meta_type="CPS Directory Tool">
+  <property name="title"></property>
+
+  <object name="dir_ramcache" meta_type="RAM Cache Manager"/>
+
+  <!--
+  XXX : Directory trantyping not implemented yet
+  When directory transtyping is enabled, use it, since it will allow
+  safety checks/content IO.
+  -->
+  <object name="members" meta_type="CPS ZODB Directory" remove="True"/>
+  <object name="groups" meta_type="CPS ZODB Directory" remove="True"/>
+
+  <!-- ******************************************************************* -->
+  <!-- Directories used to replace the default members and groups directory -->
+  <!-- ******************************************************************* -->
+
+  <object name="members" meta_type="CPS Meta Directory"/>
+  <object name="groups" meta_type="CPS Stacking Directory"/>
+  <object name="groups_ldap" meta_type="CPS LDAP Backing Directory"/>
+  <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
+  <object name="members_stack" meta_type="CPS Stacking Directory"/>
+  <!--
+  CPS specific attributes branch
+  Second backing branch for the top level Meta directory that stores attributes
+  that are specific to CPS such as the homeless and last_login_time attributes.
+  This branch is just a single ZODB directory.
+  -->
+  <object name="members_specific" meta_type="CPS ZODB Directory"/>
+
+</object>

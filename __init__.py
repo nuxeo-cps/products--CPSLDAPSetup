@@ -63,3 +63,13 @@ if imports_ok:
             EXTENSION,
             for_=ICPSSite)
 
+        profile_registry.registerProfile(
+            'classical',
+            'CPS LDAP Setup (classical LDAP, still experimental !)',
+            "Extension to plug to classical LDAP directories",
+            'profiles/classical',
+            'CPSLDAPSetup',
+            EXTENSION,
+            for_=ICPSSite)
+
+

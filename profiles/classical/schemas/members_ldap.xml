@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<object name="members_ldap" meta_type="CPS Schema">
+
+  <!-- login/id info -->
+  <field name="dn" meta_type="CPS String Field"/>
+  <field name="uid" meta_type="CPS String Field"/>
+  <field name="userPassword" meta_type="CPS Password Field"/>
+
+  <!-- generally expected by cps -->
+  <field name="cn" meta_type="CPS String Field">
+    <property name="default_expr"></property>
+    <property name="is_searchabletext">True</property>
+  </field>
+  <field name="sn" meta_type="CPS String Field"/>
+  <field name="mail" meta_type="CPS String Field"/>
+
+  <!-- Other interesting member data from inetOrgPerson -->
+  <field name="givenName" meta_type="CPS String Field"/>
+  <field name="telephoneNumber" meta_type="CPS String Field"/>
+  <field name="postalAddress" meta_type="CPS String Field"/>
+  <field name="title" meta_type="CPS String Field"/>
+  <field name="o" meta_type="CPS String Field"/>
+  <field name="ou" meta_type="CPS String Field"/>
+
+  <!-- CPS groups and global roles -->
+ <field name="cpsGroups" meta_type="CPS String List Field">
+  <property name="acl_write_roles">Manager; EntryManager</property>
+  <property name="read_ignore_storage">True</property>
+  <property
+     name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
+  <property name="write_ignore_storage">True</property>
+  <property
+     name="write_process_expr">python:util.dirCrossSetList('groups', 'members', data.get('uid'), data[field.getFieldId()])</property>
+ </field>
+ <field name="cpsRoles" meta_type="CPS String List Field">
+  <property name="acl_write_roles">Manager</property>
+  <property name="read_ignore_storage">True</property>
+  <property
+     name="read_process_expr">python:[role for role in util.dirCrossGetList('roles', 'members', data.get('uid')) if role != 'Member']+['Member']</property>
+  <property name="write_ignore_storage">True</property>
+  <property
+     name="write_process_expr">python:util.dirCrossSetList('roles', 'members', data.get('uid'), data[field.getFieldId()])</property>
+ </field>
+</object>

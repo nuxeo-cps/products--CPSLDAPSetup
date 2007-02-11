@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<object name="members_ldap" meta_type="CPS LDAP Backing Directory">
+ <property name="title"></property>
+ <property name="schema">members_ldap</property>
+ <property name="schema_search"></property>
+ <property name="layout"></property>
+ <property name="layout_search"></property>
+ <property name="acl_directory_view_roles"></property>
+ <property name="acl_entry_create_roles">Manager</property>
+ <property name="acl_entry_delete_roles">Manager</property>
+ <property name="acl_entry_view_roles">Manager</property>
+ <property name="acl_entry_edit_roles">Manager</property>
+ <property name="title_field">cn</property>
+ <property name="search_substring_fields">
+  <element value="cn"/>
+  <element value="givenName"/>
+  <element value="sn"/>
+  <element value="mail"/>
+ </property>
+ <property name="is_hierarchical">False</property>
+ <property name="password_field">userPassword</property>
+ <property name="password_encryption">SSHA</property>
+ <property name="ldap_server">localhost</property>
+ <property name="ldap_port">389</property>
+ <property name="ldap_use_ssl">False</property>
+ <property name="ldap_base">ou=people,dc=mysite,dc=net</property>
+ <property
+    name="ldap_base_creation">ou=people,dc=mysite,dc=net</property>
+ <property name="ldap_scope">SUBTREE</property>
+ <property name="ldap_search_classes">inetOrgPerson</property>
+ <property name="ldap_search_filter"></property>
+ <property name="ldap_bind_dn">cn=cps,ou=applications,dc=mysite,dc=net</property>
+ <property name="ldap_bind_password">changeme</property>
+ <property name="ldap_rdn_attr">uid</property>
+ <property name="ldap_object_classes">top, person, inetOrgPerson</property>
+ <property name="children_attr">None</property>
+ <property name="children_id_attr">cn</property>
+ <cache-manager name="dir_ramcache"/>
+</object>

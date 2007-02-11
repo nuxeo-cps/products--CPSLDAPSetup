@@ -3,10 +3,11 @@ Requires
 -
 New features
 ~~~~~~~~~~~~
--
+- Added first shot of the classical LDAP profile, that is a profile that works
+  on classical LDAP configuration, with no need to use specific LDAP schemas.
 Bug fixes
 ~~~~~~~~~
--
+- Removed members_groups profile remnants.
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
 - 
