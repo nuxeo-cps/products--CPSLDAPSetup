@@ -1,4 +1,25 @@
 ===========================================================
+Package: CPSLDAPSetup 1.2.0
+===========================================================
+First release built by: div at: 2007-02-19T18:37:10
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.2.0
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@51117
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+- Added first shot of the classical LDAP profile, that is a profile that works
+  on classical LDAP configuration, with no need to use specific LDAP schemas.
+Bug fixes
+~~~~~~~~~
+- Removed members_groups profile remnants.
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.1.2
 ===========================================================
 First release built by: gracinet at: 2006-11-23T21:04:03
