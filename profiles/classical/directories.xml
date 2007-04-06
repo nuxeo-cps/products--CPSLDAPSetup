@@ -28,6 +28,9 @@
   that are specific to CPS such as the homeless and last_login_time attributes.
   This branch is just a single ZODB directory.
   -->
-  <object name="members_specific" meta_type="CPS ZODB Directory"/>
+  <object name="members_cps_fields" meta_type="CPS ZODB Directory"/>
 
+  <!-- ******************************************************************* -->
+  <!-- Roles directory remains as defined in the CPSDefault base profile   -->
+  <!-- ******************************************************************* -->
 </object>
