@@ -1,4 +1,24 @@
 ===========================================================
+Package: CPSLDAPSetup 1.3.1
+===========================================================
+First release built by: div at: 2007-04-16T20:16:51
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.3.1
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@51539
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Related to #1830: write_process_dependent_fields
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.3.0
 ===========================================================
 First release built by: madarche at: 2007-04-06T17:23:33
