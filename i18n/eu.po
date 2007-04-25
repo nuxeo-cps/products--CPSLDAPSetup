@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CPSLDAPSetup\n"
-"POT-Creation-Date: 2006-03-20 16:35default\n"
+"POT-Creation-Date: 2007-04-25 12:26default\n"
 "PO-Revision-Date: 2006-11-16 15:43+0100\n"
 "Last-Translator: Jesus Martin <jesusmartin@lasalle.es>\n"
 "Language-Team: euskera <perikoalkain@lasalle.es>\n"
@@ -29,4 +29,3 @@ msgstr "Erakundea"
 
 msgid "label_org_unit"
 msgstr "Departamentua"
-
