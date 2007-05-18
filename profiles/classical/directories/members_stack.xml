@@ -16,7 +16,6 @@
  <property name="is_hierarchical">False</property>
  <property name="backing_dirs">
   <element value="members_ldap"/>
-  <element value="members_zodb"/>
  </property>
  <property name="creation_dir">members_ldap</property>
 </object>
