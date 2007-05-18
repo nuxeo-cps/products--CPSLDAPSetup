@@ -6,7 +6,7 @@
   <object name="dir_ramcache" meta_type="RAM Cache Manager"/>
 
   <!--
-  XXX : Directory trantyping not implemented yet
+  Directory transtyping not implemented yet.
   When directory transtyping is enabled, use it, since it will allow
   safety checks/content IO.
   -->
@@ -17,11 +17,13 @@
   <!-- Directories used to replace the default members and groups directory -->
   <!-- ******************************************************************* -->
 
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Members directory                                                   -->
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <object name="members" meta_type="CPS Meta Directory"/>
-  <object name="groups" meta_type="CPS Stacking Directory"/>
-  <object name="groups_ldap" meta_type="CPS LDAP Backing Directory"/>
-  <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
+  <!-- We need a stacking directory every time we have a LDAP backing -->
   <object name="members_stack" meta_type="CPS Stacking Directory"/>
+  <object name="members_ldap" meta_type="CPS LDAP Backing Directory"/>
   <!--
   CPS specific attributes branch
   Second backing branch for the top level Meta directory that stores attributes
@@ -29,6 +31,13 @@
   This branch is just a single ZODB directory.
   -->
   <object name="members_cps_fields" meta_type="CPS ZODB Directory"/>
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Groups directory                                                    -->
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- We need a stacking directory every time we have a LDAP backing -->
+  <object name="groups" meta_type="CPS Stacking Directory"/>
+  <object name="groups_ldap" meta_type="CPS LDAP Backing Directory"/>
 
   <!-- ******************************************************************* -->
   <!-- Roles directory remains as defined in the CPSDefault base profile   -->
