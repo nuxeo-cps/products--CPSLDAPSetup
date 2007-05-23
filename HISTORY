@@ -1,4 +1,24 @@
 ===========================================================
+Package: CPSLDAPSetup 1.4.1
+===========================================================
+First release built by: div at: 2007-05-23T14:58:28
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.4.1
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk/@51767
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Still working on the classical profile.
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.4.0
 ===========================================================
 First release built by: div at: 2007-04-26T15:59:56
