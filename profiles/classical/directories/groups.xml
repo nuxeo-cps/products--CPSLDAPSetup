@@ -10,12 +10,12 @@
  <property name="acl_entry_create_roles">Manager</property>
  <property name="acl_entry_delete_roles">Manager</property>
  <property name="acl_entry_view_roles">Manager; Member</property>
- <property name="acl_entry_edit_roles">Manager; Owner</property>
+ <property name="acl_entry_edit_roles">Manager</property>
  <property name="id_field">cn</property>
  <property name="title_field">cn</property>
  <property name="backing_dirs">
   <element value="groups_ldap"/>
  </property>
  <property name="creation_dir">groups_ldap</property>
- <entry-local-role role="Owner">python:user_id == owner</entry-local-role>
+ <entry-local-role role="GroupMember">python:entry_id in getUserEntry().get('groups', [])</entry-local-role>
 </object>
