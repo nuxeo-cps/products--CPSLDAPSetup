@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- $Id -->
 <object name="groups_ldap" meta_type="CPS LDAP Backing Directory">
  <property name="title"></property>
  <property name="schema">groups</property>
@@ -22,9 +23,9 @@
  <property name="ldap_base">ou=group,dc=mysite,dc=net</property>
  <property name="ldap_base_creation">ou=group,dc=mysite,dc=net</property>
  <property name="ldap_scope">SUBTREE</property>
- <property name="ldap_search_classes">groupOfNames</property>
+ <property name="ldap_search_classes">groupOfUniqueNames</property>
  <property name="ldap_search_filter"></property>
- <property name="ldap_bind_dn">uid=cps,ou=application,dc=mysite,dc=net</property>
+ <property name="ldap_bind_dn">cn=cps,ou=application,dc=mysite,dc=net</property>
  <property name="ldap_bind_password">CHANGEME</property>
  <property name="ldap_rdn_attr">cn</property>
  <property name="ldap_object_classes">groupOfUniqueNames</property>

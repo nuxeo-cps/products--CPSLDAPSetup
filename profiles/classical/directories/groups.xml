@@ -2,7 +2,7 @@
 <object name="groups" meta_type="CPS Stacking Directory">
  <property name="title">label_groups</property>
  <property name="schema">groups</property>
- <property name="schema_search">groups_search</property>
+ <property name="schema_search"></property>
  <property name="layout">groups</property>
  <property name="layout_search">groups_search</property>
  <property name="acl_directory_view_roles">Manager; Member</property>

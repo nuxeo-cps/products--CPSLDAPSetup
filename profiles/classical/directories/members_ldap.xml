@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- $Id -->
 <object name="members_ldap" meta_type="CPS LDAP Backing Directory">
  <property name="title"></property>
  <property name="schema">members_ldap</property>
