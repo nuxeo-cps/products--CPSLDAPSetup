@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- $Id -->
+<!-- $Id$ -->
 <object name="groups_ldap" meta_type="CPS LDAP Backing Directory">
  <property name="title"></property>
  <property name="schema">groups</property>
