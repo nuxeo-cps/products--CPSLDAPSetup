@@ -1,5 +1,8 @@
-# (C) Copyright 2005-2006 Nuxeo SAS <http://nuxeo.com>
-# Authors: Julien Anguenot <ja@nuxeo.com>
+# (C) Copyright 2005-2007 Nuxeo SAS <http://nuxeo.com>
+# Authors:
+# Julien Anguenot <ja@nuxeo.com>
+# Olivier Grisel <og@nuxeo.com>
+# M.-A. Darche <madarche@nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2 as published
@@ -47,7 +50,7 @@ if imports_ok:
         # Extension profile registration
         profile_registry.registerProfile(
             'default',
-            'CPS LDAP Setup',
+            'CPS LDAP Setup (members in LDAP, groups and roles in ZODB)',
             "Sample LDAP Setup for Nuxeo CPS",
             'profiles/default',
             'CPSLDAPSetup',
@@ -65,7 +68,7 @@ if imports_ok:
 
         profile_registry.registerProfile(
             'classical',
-            'CPS LDAP Setup (classical LDAP, still experimental !)',
+            "CPS LDAP Setup (members and groups in LDAP, roles in ZODB)",
             "Extension to plug to classical LDAP directories",
             'profiles/classical',
             'CPSLDAPSetup',
