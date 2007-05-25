@@ -4,7 +4,8 @@
 
   <!-- This field is the canonical attribute used by CPS -->
   <field name="members" meta_type="CPS String List Field">
-    <property name="read_process_expr">uniqueMember</property>
+    <!-- Pass the value of uniqueMember field to the mapDnToMemberIds method -->
+    <property name="read_process_expr">python:util.mapDnToMemberIds(uniqueMember)</property>
     <property name="write_process_expr" />
     <property name="read_ignore_storage">False</property>
     <property name="write_ignore_storage">False</property>
