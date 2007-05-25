@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
 <object name="groups" meta_type="CPS Schema">
+
+  <!-- This field is the canonical attribute used by CPS -->
   <field name="members" meta_type="CPS String List Field">
+    <property name="read_process_expr">uniqueMember</property>
+    <property name="write_process_expr" />
+    <property name="read_ignore_storage">False</property>
+    <property name="write_ignore_storage">False</property>
+    <property name="read_process_dependent_fields">
+      <element value="uniqueMember"/>
+    </property>
+  </field>
+
+  <!--  This field maps to the LDAP schema -->
+  <field name="uniqueMember" meta_type="CPS String List Field">
     <property name="read_process_expr" />
     <property name="write_process_expr" />
     <property name="read_ignore_storage">False</property>
