@@ -2,6 +2,8 @@
 CPSLDAPSetup
 ============
 
+:Author: Olivier Grisel
+
 :Revision: $Id$
 
 This package provides a sample LDAP configuration in the form of an extension
@@ -133,3 +135,9 @@ Dependencies
  - CPS >= 3.4.1
    http://www.cps-project.org/
  - _``python-ldap``: http://python-ldap.sf.net
+
+
+.. Local Variables:
+.. mode: rst
+.. End:
+.. vim: set filetype=rst:
