@@ -14,7 +14,10 @@
     </property>
   </field>
 
-  <!--  This field maps to the LDAP schema -->
+  <!--  Fields below map to the LDAP schema -->
+
+  <field name="cn" meta_type="CPS String Field">
+  </field>
   <field name="uniqueMember" meta_type="CPS String List Field">
     <property name="read_process_expr" />
     <property name="write_process_expr" />

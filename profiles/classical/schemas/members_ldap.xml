@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- $Id$ -->
 <object name="members_ldap" meta_type="CPS Schema">
 
   <!-- login/id info -->
@@ -19,22 +20,5 @@
   <field name="telephoneNumber" meta_type="CPS String Field"/>
   <field name="postalAddress" meta_type="CPS String Field"/>
   <field name="title" meta_type="CPS String Field"/>
-
- <field name="roles" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager</property>
-  <property name="default_expr">python: ['Member',]</property>
- </field>
-
- <!-- CPS groups computed references -->
- <field name="groups" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager; EntryManager</property>
-  <property name="read_ignore_storage">True</property>
-  <property
-     name="read_process_expr">python:util.dirCrossGetList('groups', 'uniqueMember', data.get('uid'))</property>
-  <property name="write_ignore_storage">True</property>
-   <property
-      name="write_process_expr">python:util.dirCrossSetList('groups', 'uniqueMember', uid, value)</property>
-   <property name="write_process_dependent_fields">uid</property>
- </field>
 
 </object>

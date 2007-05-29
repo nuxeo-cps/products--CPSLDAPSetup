@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<object name="groups_search" meta_type="CPS Layout">
+ <property name="layout_create_method"></property>
+ <property name="layout_edit_method"></property>
+ <property name="layout_view_method"></property>
+ <property name="style_prefix">layout_dir_</property>
+ <property name="flexible_widgets"/>
+ <property name="validate_values_expr"></property>
+ <widget name="group" meta_type="String Widget">
+  <property name="fields">
+   <element value="cn"/>
+  </property>
+  <property name="label">label_group</property>
+  <property name="label_edit">label_group</property>
+  <property name="is_i18n">True</property>
+ </widget>
+ <table>
+  <row>
+   <cell name="group"/>
+  </row>
+ </table>
+</object>
