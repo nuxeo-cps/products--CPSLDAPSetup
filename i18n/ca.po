@@ -1,0 +1,31 @@
+# Gettext Message File for default.
+# Your Name <your@email>, Year
+msgid ""
+msgstr ""
+"Project-Id-Version: CPSLDAPSetup\n"
+"POT-Creation-Date: 2006-03-20 16:35default\n"
+"PO-Revision-Date: 2007-05-31 09:36+0100\n"
+"Language-Team: valencià/català. <juangus@lasalle.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Preferred-encodings: latin9 utf-8\n"
+"Domain: default\n"
+"Language-Code: ca\n"
+"Language-Name: valencià/català\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-Country: SPAIN\n"
+
+msgid "label_tel_number"
+msgstr "Número de Telèfon"
+
+msgid "label_postal_address"
+msgstr "Adreça postal:"
+
+msgid "label_organization"
+msgstr "Organització"
+
+msgid "label_org_unit"
+msgstr "Departament"
+
