@@ -145,39 +145,6 @@
   <property name="hidden_layout_modes"/>
   <property name="hidden_readonly_layout_modes"/>
  </widget>
- <widget name="title" meta_type="String Widget">
-  <property name="fields">
-   <element value="title"/>
-  </property>
-  <property name="label">label_title</property>
-  <property name="label_edit">label_title</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
- <widget name="o" meta_type="String Widget">
-  <property name="fields">
-   <element value="o"/>
-  </property>
-  <property name="label">label_organization</property>
-  <property name="label_edit">label_organization</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
- <widget name="ou" meta_type="String Widget">
-  <property name="fields">
-   <element value="ou"/>
-  </property>
-  <property name="label">label_org_unit</property>
-  <property name="label_edit">label_org_unit</property>
-  <property name="is_i18n">True</property>
-  <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
-  <property name="hidden_readonly_layout_modes"/>
- </widget>
 
 
  <!-- CPS groups and global roles -->
@@ -238,17 +205,8 @@
   <row>
    <cell name="telephoneNumber" ncols="2"/>
   </row>
-    <row>
+  <row>
    <cell name="postalAddress" ncols="2"/>
-  </row>
-    <row>
-   <cell name="title" ncols="2"/>
-  </row>
-    <row>
-   <cell name="o" ncols="2"/>
-  </row>
-    <row>
-   <cell name="ou" ncols="2"/>
   </row>
   <row>
    <cell name="homeless" ncols="2"/>
