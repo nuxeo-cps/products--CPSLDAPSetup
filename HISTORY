@@ -1,4 +1,25 @@
 ===========================================================
+Package: CPSLDAPSetup 1.4.2
+===========================================================
+First release built by: madarche at: 2007-10-19T15:16:23
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.4.2
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@52088
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Ongoing work on the "classical" profile to be able to plug CPS on an LDAP
+  holding both members and groups.
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.4.1
 ===========================================================
 First release built by: div at: 2007-05-23T14:58:28
