@@ -6,7 +6,8 @@ New features
 -
 Bug fixes
 ~~~~~~~~~
--
+- Ongoing work on the "classical" profile to be able to plug CPS on an LDAP
+  holding both members and groups.
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
 - 
