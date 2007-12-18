@@ -65,11 +65,13 @@
  <field name="groups" meta_type="CPS String List Field">
    <property name="acl_write_roles">Manager; EntryManager</property>
    <property name="read_ignore_storage">True</property>
-   <property
-      name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
+   <property name="read_process_expr"
+      >python:util.dirCrossLdapGetList('groups_ldap', 'uniqueMember', uid, 'ou=people,dc=mysite,dc=net')</property>
+   <property name="read_process_dependent_fields">uid</property>
    <property name="write_ignore_storage">True</property>
    <property
-      name="write_process_expr">python:util.dirCrossSetList('groups', 'members', uid, value)</property>
+      name="write_process_expr"
+      >python:util.dirCrossSetList('groups', 'members', uid, value)</property>
    <property name="write_process_dependent_fields">uid</property>
  </field>
 
@@ -83,6 +85,7 @@
    -->
    <property
       name="read_process_expr">python:util.dirCrossGetList('roles', 'members', uid)</property>
+   <property name="read_process_dependent_fields">uid</property>
    <property name="write_ignore_storage">True</property>
    <property
       name="write_process_expr">python:util.dirCrossSetList('roles', 'members', uid, value)</property>

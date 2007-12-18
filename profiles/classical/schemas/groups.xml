@@ -2,26 +2,56 @@
 <!-- $Id$ -->
 <object name="groups" meta_type="CPS Schema">
 
-  <!-- This field is the canonical attribute used by CPS -->
-  <field name="members" meta_type="CPS String List Field">
-    <!-- Pass the value of uniqueMember field to the mapDnToMemberIds method -->
-    <property name="read_process_expr">python:util.mapDnToMemberIds(uniqueMember)</property>
-    <property name="write_process_expr" />
-    <property name="read_ignore_storage">False</property>
-    <property name="write_ignore_storage">False</property>
-    <property name="read_process_dependent_fields">
-      <element value="uniqueMember"/>
-    </property>
-  </field>
-
-  <!--  Fields below map to the LDAP schema -->
-
+  <!--  ********************************** -->
+  <!--  Fields that map to the LDAP schema -->
   <field name="cn" meta_type="CPS String Field">
+    <property name="read_process_expr" />
+    <property name="read_ignore_storage">False</property>
+    <property name="write_process_expr">
+      <!--
+      Write the entry DN from the group name stored in the "group" field,
+      that is the entry id.
+      -->
+      <!--
+      python:'cn=%s,ou=group,dc=mysite,dc=net' % group
+      -->
+    </property>
+    <property name="write_process_dependent_fields">
+      <element value="group"/>
+    </property>
+    <property name="write_ignore_storage">False</property>
   </field>
+
   <field name="uniqueMember" meta_type="CPS String List Field">
     <property name="read_process_expr" />
     <property name="write_process_expr" />
     <property name="read_ignore_storage">False</property>
     <property name="write_ignore_storage">False</property>
   </field>
+  <!--  ********************************** -->
+
+
+  <!-- This field is the canonical attribute used by CPS -->
+  <field name="members" meta_type="CPS String List Field">
+    <!-- Pass the value of uniqueMember field to the mapDnToMemberIds method -->
+    <property name="read_process_expr">python:util.mapDnToMemberIds(uniqueMember)</property>
+    <property name="read_process_dependent_fields">
+      <element value="uniqueMember"/>
+    </property>
+    <property name="read_ignore_storage">False</property>
+
+    <!--
+    Pass the value of the modified field, plus the name of the field to modify
+    with the new computed value.
+    -->
+    <property name="write_process_expr">
+      <!-- Write the member entry DN in the uniqueMember field -->
+      python:util.mapMemberIdsToDn(value, 'ou=people,dc=mysite,dc=net', 'uniqueMember', data)
+    </property>
+    <property name="write_process_dependent_fields">
+      <element value="uniqueMember"/>
+    </property>
+    <property name="write_ignore_storage">False</property>
+  </field>
+
 </object>
