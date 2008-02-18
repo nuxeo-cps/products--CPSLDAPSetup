@@ -6,9 +6,9 @@
  <property name="style_prefix">layout_dir_</property>
  <property name="flexible_widgets"/>
  <property name="validate_values_expr"></property>
- <widget name="cpsGroups" meta_type="MultiSelect Widget">
+ <widget name="groups" meta_type="MultiSelect Widget">
   <property name="fields">
-   <element value="cpsGroups"/>
+   <element value="groups"/>
   </property>
   <property name="label">label_groups</property>
   <property name="label_edit">label_groups</property>
@@ -18,9 +18,9 @@
   <property name="hidden_readonly_layout_modes"/>
   <property name="vocabulary">groups</property>
  </widget>
- <widget name="cpsRoles" meta_type="MultiSelect Widget">
+ <widget name="roles" meta_type="MultiSelect Widget">
   <property name="fields">
-   <element value="cpsRoles"/>
+   <element value="roles"/>
   </property>
   <property name="label">label_roles</property>
   <property name="label_edit">label_roles</property>

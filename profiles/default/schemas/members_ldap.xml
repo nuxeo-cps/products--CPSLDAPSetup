@@ -21,26 +21,4 @@
   <field name="title" meta_type="CPS String Field"/>
   <field name="o" meta_type="CPS String Field"/>
   <field name="ou" meta_type="CPS String Field"/>
-
-  <!-- CPS groups and global roles -->
- <field name="cpsGroups" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager; EntryManager</property>
-  <property name="read_ignore_storage">True</property>
-  <property
-     name="read_process_expr">python:util.dirCrossGetList('groups', 'members', data.get('uid'))</property>
-  <property name="write_ignore_storage">True</property>
-  <property
-     name="write_process_expr">python:util.dirCrossSetList('groups', 'members', uid, value)</property>
-  <property name="write_process_dependent_fields">uid</property>
- </field>
- <field name="cpsRoles" meta_type="CPS String List Field">
-  <property name="acl_write_roles">Manager</property>
-  <property name="read_ignore_storage">True</property>
-  <property
-     name="read_process_expr">python:[role for role in util.dirCrossGetList('roles', 'members', data.get('uid')) if role != 'Member']+['Member']</property>
-  <property name="write_ignore_storage">True</property>
-  <property
-     name="write_process_expr">python:util.dirCrossSetList('roles', 'members', uid, value)</property>
-  <property name="write_process_dependent_fields">uid</property>
- </field>
 </object>
