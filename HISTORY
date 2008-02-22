@@ -1,4 +1,30 @@
 ===========================================================
+Package: CPSLDAPSetup 1.4.3
+===========================================================
+First release built by: madarche at: 2008-02-22T15:58:19
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.4.3
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@52586
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Removed redundant read_process_expr and write_process_expr in the members_ldap
+  schema.
+- Renamed cpsGroups and cpsRoles fields and widgets into groups and roles,
+  to have something consistent with the CPSDefault corresponding profiles in the
+  ZODB.
+- More work on the classical profile.
+- Made the language translations more consistent regarding the User ID.
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.4.2
 ===========================================================
 First release built by: madarche at: 2007-10-19T15:16:23
