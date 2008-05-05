@@ -80,6 +80,10 @@
    <property name="acl_write_roles">Manager</property>
    <property name="read_ignore_storage">True</property>
    <!--
+   Use this property instead if you want all the users to have at least
+   the Member role.
+   -->
+   <!--
    <property
       name="read_process_expr">python:[role for role in util.dirCrossGetList('roles', 'members', uid) if role != 'Member'] + ['Member']</property>
    -->
