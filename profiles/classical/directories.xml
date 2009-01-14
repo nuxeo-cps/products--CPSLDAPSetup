@@ -3,6 +3,10 @@
 <object name="portal_directories" meta_type="CPS Directory Tool">
   <property name="title"></property>
 
+  <!-- Access point to ldap server (bind parameters) 
+      Default values are ok for the sample openldap configuration -->
+  <object name="ldap_server_access" meta_type="LDAP Server Access"/>
+
   <object name="dir_ramcache" meta_type="RAM Cache Manager"/>
 
   <!--

@@ -29,3 +29,16 @@ class CPSLDAPSetupLayerClass(ExtensionProfileLayerClass):
     extension_ids = ('CPSLDAPSetup:default',)
 
 CPSLDAPSetupLayer = CPSLDAPSetupLayerClass(__name__, 'CPSLDAPSetupLayer')
+
+class CPSLDAPSetupGroupLayerClass(ExtensionProfileLayerClass):
+    extension_ids = ('CPSLDAPSetup:classical',)
+
+CPSLDAPSetupGroupLayer = CPSLDAPSetupGroupLayerClass(__name__,
+                                                     'CPSLDAPSetupGroupLayer')
+
+class CPSLDAPSetupReadonlyLayerClass(ExtensionProfileLayerClass):
+    extension_ids = ('CPSLDAPSetup:default',
+                     'CPSLDAPSetup:readonly_ldap',)
+
+CPSLDAPSetupReadonlyLayer = CPSLDAPSetupReadonlyLayerClass(
+    __name__, 'CPSLDAPSetupReadonlyLayer')

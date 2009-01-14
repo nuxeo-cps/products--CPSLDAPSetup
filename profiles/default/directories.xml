@@ -4,6 +4,10 @@
  <property name="title"></property>
  <object name="dir_ramcache" meta_type="RAM Cache Manager"/>
 
+ <!-- Access point to ldap server (bind parameters) 
+      Default values are ok for the sample openldap configuration -->
+ <object name="ldap_server_access" meta_type="LDAP Server Access"/>
+
  <!-- XXX When directory transtyping is enabled, use it, since it will allow
  safety checks/content IO -->
  <object name="members" remove="True"/>

@@ -20,17 +20,12 @@
  <property name="is_hierarchical">False</property>
  <property name="password_field">userPassword</property>
  <property name="password_encryption">SSHA</property>
- <property name="ldap_server">localhost</property>
- <property name="ldap_port">389</property>
- <property name="ldap_use_ssl">False</property>
  <property name="ldap_base">ou=people,dc=mysite,dc=net</property>
  <property
     name="ldap_base_creation">ou=people,dc=mysite,dc=net</property>
  <property name="ldap_scope">SUBTREE</property>
  <property name="ldap_search_classes">inetOrgPerson</property>
  <property name="ldap_search_filter"></property>
- <property name="ldap_bind_dn">cn=cps,ou=applications,dc=mysite,dc=net</property>
- <property name="ldap_bind_password">changeme</property>
  <property name="ldap_rdn_attr">uid</property>
  <property name="ldap_object_classes">top, person, inetOrgPerson</property>
  <property name="children_attr">None</property>

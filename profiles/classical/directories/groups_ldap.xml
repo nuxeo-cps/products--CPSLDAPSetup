@@ -17,16 +17,11 @@
   <element value="description"/>
  </property>
  <property name="is_hierarchical">False</property>
- <property name="ldap_server">localhost</property>
- <property name="ldap_port">389</property>
- <property name="ldap_use_ssl">False</property>
  <property name="ldap_base">ou=group,dc=mysite,dc=net</property>
  <property name="ldap_base_creation">ou=group,dc=mysite,dc=net</property>
  <property name="ldap_scope">SUBTREE</property>
  <property name="ldap_search_classes">groupOfUniqueNames</property>
  <property name="ldap_search_filter"></property>
- <property name="ldap_bind_dn">cn=cps,ou=application,dc=mysite,dc=net</property>
- <property name="ldap_bind_password">CHANGEME</property>
  <property name="ldap_rdn_attr">cn</property>
  <property name="ldap_object_classes">groupOfUniqueNames</property>
  <property name="children_attr">None</property>
