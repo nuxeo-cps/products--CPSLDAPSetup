@@ -3,6 +3,8 @@
  <property name="layout_create_method"></property>
  <property name="layout_edit_method"></property>
  <property name="layout_view_method"></property>
+ <property name="layout_search_noid_method"
+    type="string">layout_dir_search</property>
  <property name="style_prefix">layout_dir_</property>
  <property name="flexible_widgets"/>
  <property name="validate_values_expr"></property>
@@ -89,7 +91,10 @@
   <property name="label_edit">label_id</property>
   <property name="is_i18n">True</property>
   <property name="readonly_layout_modes"/>
-  <property name="hidden_layout_modes"/>
+  <property name="hidden_layout_modes">
+   <!-- See #1771 -->
+   <element value="search_noid"/>
+  </property>
   <property name="hidden_readonly_layout_modes"/>
  </widget>
  <table>

@@ -6,7 +6,7 @@ New features
 -
 Bug fixes
 ~~~~~~~~~
--
+- #1979: CPSLDAPSetup breaks some CPSSubscriptions screens
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
 - 
