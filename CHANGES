@@ -6,6 +6,7 @@ New features
 -
 Bug fixes
 ~~~~~~~~~
+- #2075: LDAP groups setup must deactivated nested groups feature
 - #1979: CPSLDAPSetup breaks some CPSSubscriptions screens
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
