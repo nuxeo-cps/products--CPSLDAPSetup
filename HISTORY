@@ -1,4 +1,25 @@
 ===========================================================
+Package: CPSLDAPSetup 1.4.6
+===========================================================
+First release built by: gracinet at: 2009-12-15T12:27:55
+SVN Tag: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/tags/1.4.6
+Build from: https://svn.nuxeo.org/pub/CPS3/products/CPSLDAPSetup/trunk@54101
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- #2075: LDAP groups setup must deactivated nested groups feature
+- #1979: CPSLDAPSetup breaks some CPSSubscriptions screens
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.4.5
 ===========================================================
 First release built by: madarche at: 2008-11-23T22:12:21
