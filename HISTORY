@@ -1,4 +1,21 @@
 ===========================================================
+Package: CPSLDAPSetup 1.4.7
+===========================================================
+First release built by: gracinet at: 2010-03-14T16:26:28
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- Switch to mercurial DCVS and hgbundler release manager
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: CPSLDAPSetup 1.4.6
 ===========================================================
 First release built by: gracinet at: 2009-12-15T12:27:55
